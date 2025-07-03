@@ -5,10 +5,10 @@
  */
 
 :root {
-  --accent: #000d8a;
-  --accent-dark: #2337ff;
+  --accent: #2337ff;
+  --accent-dark: #000d8a;
   --black: 229, 233, 240;
-  --gray: 96, 115, 159;
+  --gray: 160, 170, 200;
   --gray-light: 15, 18, 25;
   --gray-dark: 200, 210, 220;
   --gray-gradient: rgba(var(--gray-light), 50%), #000;
