@@ -143,7 +143,6 @@ hr {
   transform: translateX(-50%);
   width: 100%;
   max-width: 1080px;
-  padding: 0 1em;
 }
 
 .sr-only {
