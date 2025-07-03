@@ -62,7 +62,6 @@ h6 {
 }
 h1 {
   font-size: 3.052em;
-  max-width: 1080px;
 }
 h2 {
   font-size: 2.441em;
@@ -136,6 +135,14 @@ hr {
   main {
     padding: 1em;
   }
+}
+
+.wide-heading {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 
 .sr-only {
