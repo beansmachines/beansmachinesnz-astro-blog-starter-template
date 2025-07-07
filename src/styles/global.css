@@ -40,6 +40,7 @@ body {
   background-size: 100%;
   background-color: rgb(var(--gray-light));
   background-image: url("/IMG_9949_compressed.jpg");
+  background-attachment: fixed;
   word-wrap: break-word;
   overflow-wrap: break-word;
   color: rgb(var(--gray-dark));
