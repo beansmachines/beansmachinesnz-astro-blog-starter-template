@@ -38,6 +38,7 @@ body {
   background: linear-gradient(var(--gray-gradient)) no-repeat;
   background-size: 100% 200px;
   background-color: rgb(var(--gray-light));
+  background-image: url("/IMG_9949_compressed.jpg");
   word-wrap: break-word;
   overflow-wrap: break-word;
   color: rgb(var(--gray-dark));
