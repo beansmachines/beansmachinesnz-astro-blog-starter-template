@@ -1,0 +1,148 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+---
+
+<Layout
+	title="Electric Moon order form"
+	description="Lorem ipsum dolor sit amet"
+	pubDate={new Date('August 08 2021')}
+	heroImage="/blog-placeholder-about.jpg"
+>
+
+    <h1  style="color: red;">In testing, do not use </h1>
+    <p  style="color: red;">BACKEND NOT YET IMPLEMENTED.
+        <br>
+        Email beansmachines.nz at gmail dot com if you wish to make an order or other inquiry at this time
+    </p>
+
+    <form name="orderform" method="POST" data-netlify="true">
+        <label>
+            Name
+            <input type="text" name="name" required />
+        </label>
+        <br>
+        <label>
+            Email
+            <input type="email" name="email" required />
+        </label>
+        <br>
+
+        <label for="product-type">Product</label>
+        <select name="product-type" id="product-type" required>
+            <option value="">-- Choose a product --</option>
+            <option value="1">Electric Moon</option>
+        </select>
+        <br>
+
+        <label for="product-quantity">Quantity</label>
+        <select name="quantity" id="product-quantity" required>
+            <option value="">-- Choose a quantity --</option>
+            <option value="1">1 unit ($80)</option>
+            <option value="2">2 units ($145)</option>
+            <option value="3">3 units ($200)</option>
+            <option value="4">4 units ($250)</option>
+            <option value="5">5 units ($300)</option>
+            <option value="6">more than 5 units - price to be confirmed separately</option>
+        </select>
+        <br>
+        <br>
+
+        <h2>Customise your Electric Moon</h2>
+        <h5>Location</h5>
+        Pick your main hemisphere where you live on Earth
+        <select name="hemisphere" id="hemisphere" required>
+            <option value="">-- Northern or Southern hemisphere --</option>
+            <option value="1">Northern hemisphere</option>
+            <option value="2">Southern hemisphere</option>
+        </select>
+        <br>
+        <i><small>This is so your Electric Moon appears the correct way up from your perspective</small></i>
+        <br>
+        <br>
+            Enter your nearest city
+            <input type="text" name="city" required />
+        </label>
+        <br>
+        <i><small>This is used to schedule night-time dimming. Type "no location" if you move time zones often or if you do not wish to have this feature</small></i>
+        <br>
+        <br>
+
+
+        <h5>In addition to Moon phase mode</h5>
+            <div>
+                <input type="checkbox" id="item0" name="items" value="rainbow mode" checked>
+                <label for="item0">Rainbow mode <i><small>included by default</small></i></label>
+            </div>
+            <div>
+                <input type="checkbox" id="item1" name="items" value="candle mode" checked>
+                <label for="item1">Candle mode <i><small>included by default</small></i></label>
+            </div>
+            <div>
+                <input type="checkbox" id="item2" name="items" value="lightning mode" checked>
+                <label for="item2">Lightning mode (deselect if you are sensitive to flashing lights) <i><small>included by default</small></i></label>
+            </div>
+            <div>
+                <input type="checkbox" id="item3" name="items" value="no-blue-at-night">
+                <label for="item3">Remove blue light from moon phase mode at night time</label>
+            </div>
+            <i><small>Only make changes if you wish to, there is no cost for changes to the above modes. Moon phase mode is always included.</small></i>
+        <br>
+        <br>
+        <h5>Optional extras</h5>
+            <div>
+                <input type="checkbox" id="item4" name="items" value="2m USB-c cable">
+                <label for="item4">2m USB-c cable (+$5)</label>
+            </div>
+            <!-- <div>
+                <input type="checkbox" id="item5" name="items" value="Wall mount and USB charger">
+                <label for="item5">Wall mount and USB charger (+$12)</label>
+            </div> -->
+            <div>
+                <input type="checkbox" id="item6" name="items" value="custom colour">
+                <label for="item6">Additional mode with a custom static colour of your choice (+$5)</label>
+            </div>
+        <label for="favcolor">Select your custom colour</label>
+            <input type="color" id="favcolor" name="favcolor" value="#004B44">
+            <div>
+                <input type="checkbox" id="item7" name="items" value="custom mode">
+                <label for="item7">Additional mode with a custom dynamic light mode as described here (+$25)</label>
+            </div>
+            <textarea name="message">For example, gently pulsing green</textarea>
+        <br>
+        <br>
+
+
+        <h2>Delivery</h2>
+        <label for="delivery-method">Delivery
+        <select name="delivery-method" id="delivery-method" required>
+            <option value="">-- Delivery or pickup --</option>
+            <option value="1">Pickup from Karori - Wellington, NZ (free)</option>
+            <option value="2">Deliver to North Island, NZ (+$10)</option>
+            <option value="3">Deliver to South Island, NZ (+$15)</option>
+            <option value="3">Deliver to Australia (+$20)</option>
+            <option value="3">Deliver elsewhere (amount to be determined and paid separately)</option>
+        </select>
+        <br>
+        <label>
+            Enter your full address if delivery is selected
+            <textarea name="address"></textarea>
+        </label>
+        <br>
+        <br>
+
+        <label>
+            Optional message
+            <textarea name="message"></textarea>
+        </label>
+        <br>
+        <br>
+
+        <h2>Payment options</h2>
+        <p  style="color: red;">PAYMENT NOT YET IMPLEMENTED
+        <br>
+            Submit button disabled until this form is working
+        </p>        
+        <!-- <button type="submit">Place Order</button> -->
+    </form>
+
+</Layout>

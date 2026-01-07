@@ -109,7 +109,7 @@ table {
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 50px;
 }
 code {
   padding: 2px 5px;
@@ -118,7 +118,7 @@ code {
 }
 pre {
   padding: 1.5em;
-  border-radius: 8px;
+  border-radius: 50px;
 }
 pre > code {
   all: unset;
@@ -142,11 +142,23 @@ hr {
   }
 }
 
+.accent {
+  color: var(--accent);
+}
+
+.boxshadow {
+ box-shadow: var(--box-shadow);
+}
+
 .about {
   /* background: #ff00ff; */
   background-size: 100%;
   background-attachment: fixed;
   background-image: url("/IMG_9949_compressed.jpg");
+}
+
+.narrow-image {
+  width: 50%
 }
 
 .wide-heading {
