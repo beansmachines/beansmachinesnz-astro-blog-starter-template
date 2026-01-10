@@ -15,6 +15,8 @@
   --box-shadow:
     0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
     0 16px 32px rgba(var(--gray), 33%);
+  --mobile-width: 832px;
+  --hide-ui-width: 720px;
 }
 @font-face {
   font-family: "Atkinson";
@@ -133,7 +135,7 @@ hr {
   border: none;
   border-top: 1px solid rgb(var(--gray-light));
 }
-@media (max-width: 720px) {
+@media (max-width: 832px) {
   body {
     font-size: 18px;
   }
@@ -166,6 +168,7 @@ hr {
   left: 50%;
   transform: translateX(-50%);
   width: 90vw;
+  text-align: center
 }
 
 .sr-only {
@@ -185,3 +188,72 @@ hr {
   /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
   white-space: nowrap;
 }
+
+
+/* for the header, was originally in header.astro */
+	header {
+		margin: 0;
+		padding: 0 1em;
+		background: black;
+		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+	}
+	h2 {
+		margin: 0;
+		font-size: 1em;
+	}
+
+	h2 a,
+	h2 a.active {
+		text-decoration: none;
+	}
+	.navalignment {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	nav a {
+		padding: 1em 0.5em;
+		color: var(--black);
+		border-bottom: 4px solid transparent;
+		text-decoration: none;
+	}
+	nav a.active {
+		text-decoration: none;
+		border-bottom-color: var(--accent);
+	}
+	.social-links,
+	.social-links a {
+		display: flex;
+	}
+
+.more-stuff-to-hide {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+}
+
+	@media (max-width: 832px) {
+		.social-links {
+			display: none;
+		}
+    .more-stuff-to-hide {
+			display: none;
+		}
+	}
+
+  .nav-links {
+    display: none;
+    /* width: 100%; */
+    /* Add other mobile styles: vertical alignment, padding, etc. */
+  }
+
+  /* Desktop styles: show navigation on large screens */
+  @media screen and (min-width: 832px) {
+    .nav-links {
+    	display: flex;
+		/* align-items: center; */
+		/* or block, inline-block, etc. for desktop layout */
+    	/* Add other desktop styles: horizontal alignment, etc. */
+    }
+}
+

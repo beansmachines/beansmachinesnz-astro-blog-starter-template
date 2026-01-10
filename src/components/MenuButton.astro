@@ -1,0 +1,102 @@
+<!-- for hamburger on mobile -->
+<button id="hamburger" aria-expanded="false" aria-controls="main-menu" class="menu-toggle">
+  <span class="line"></span>
+  <span class="betweenline"></span>
+  <span class="line"></span>
+  <span class="betweenline"></span>
+  <span class="line"></span>
+</button>
+
+<script>
+const menuBtn = document.querySelector('.menu-toggle');
+    menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('open');
+});
+</script>
+
+<style>
+  /* Mobile-first: show button on small screens */
+  .menu-toggle {
+    padding: 20px; /* Makes the entire area easily clickable */
+    /* display: inline-block; */
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    position: relative; /* Needed for positioning the inner bars */
+    height: 0;
+
+    /* display: block;
+    border: 0;
+    /* Style your button/hamburger icon here 
+    background-color: transparent;
+    cursor: pointer;
+    height: 0;  Element itself is invisible 
+    margin: 10px 0;  Space between lines */
+    
+  }
+
+  /* Desktop styles: hide button on large screens */
+  @media screen and (min-width: 832px) {
+    .menu-toggle {
+      display: none;
+    }
+  }
+/* end of hamburger functionality */
+
+.line {
+  display: block;
+  width: 25px;
+  height: 5px; /* Thickness of the lines */
+  /* background-color: #ffffff; Color of the lines */
+  background-color: rgb(var(--gray-dark));
+  border-radius: 3px;
+  transition: all 0.4s ease; /* Smooth transitions for animation */
+}
+.betweenline {
+  display: block;
+  width: 25px;
+  height: 3px; /* Thickness of the lines */
+  background-color: transparent; /* Color of the lines */
+  border-radius: 0px;
+  transition: all 0.4s ease; /* Smooth transitions for animation */
+}
+
+.menu-toggle.open .line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open .line:nth-child(3) {
+  opacity: 0;
+}
+
+.menu-toggle.open .line:nth-child(5) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+.hamburger2 {
+    box-shadow:
+    /* Line 1: 5px down */
+    0 4px 0 0 white,
+    /* Line 2: 10px down */
+    0 8px 0 0 black,
+    /* Line 3: 15px down */
+    0 12px 0 0 white,
+    /* Line 4: 15px down */
+    0 16px 0 0 black,
+    /* Line 5: 15px down */
+    0 20px 0 0 white;
+}
+
+.hamburger {
+  padding: 15px; /* Makes the entire area easily clickable */
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  position: relative; /* Needed for positioning the inner bars */
+} 
+
+</style>
