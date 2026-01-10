@@ -27,9 +27,11 @@ import Navigation from './Navigation.astro';
       
       // Toggle visibility using a class or by changing the display style
       if (isExpanded) {
-        mainMenu.style.display = 'none';
+        // mainMenu.style.display = 'none';
+        mainMenu.classList.toggle("is-open");
       } else {
-        mainMenu.style.display = 'block'; /* Or your desired mobile display style */
+        //mainMenu.style.display = 'block'; /* Or your desired mobile display style */
+        mainMenu.classList.toggle("is-open");
       }
     });
   }

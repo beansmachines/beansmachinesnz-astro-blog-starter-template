@@ -1,6 +1,6 @@
 <!-- for hamburger on mobile -->
 <button id="hamburger" aria-expanded="false" aria-controls="main-menu" class="menu-toggle">
-  <!-- extra between lines for padding without adding opaque background -->
+  <!-- extra clickable between lines for padding without adding opaque background -->
   <span class="betweenline"></span>
   <span class="betweenline"></span>
   <span class="betweenline"></span>
@@ -23,9 +23,11 @@
 
 <script>
 const menuBtn = document.querySelector('.menu-toggle');
-    menuBtn.addEventListener('click', () => {
-    menuBtn.classList.toggle('open');
-});
+  if (menuBtn) {
+      menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('open');
+      });
+  }
 </script>
 
 <style>

@@ -153,6 +153,15 @@ hr {
  box-shadow: var(--box-shadow);
 }
 
+.diagram {
+ box-shadow: var(--box-shadow);
+ background-color: rgb(var(--gray-dark));
+ height: auto;
+ width: 50%;
+ border-radius: 10px;
+ padding: 20px;
+}
+
 .about {
   /* background: #ff00ff; */
   background-size: 100%;
@@ -238,6 +247,11 @@ hr {
 		justify-content: space-between;
 }
 
+/* to handle hamburger menu */
+#main-menu {
+  display: flex;
+}
+
 	@media (max-width: 832px) {
 		.social-links {
 			display: none;
@@ -245,6 +259,13 @@ hr {
     .more-stuff-to-hide {
 			display: none;
 		}
+    /* to handle hamburger menu */
+    #main-menu {
+    display: none;
+    }
+     #main-menu.is-open {
+    display: block; /* or flex */
+    }
 	}
 
   .nav-links {
