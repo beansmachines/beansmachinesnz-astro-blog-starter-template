@@ -165,6 +165,7 @@ hr {
 }
 
 .wide-heading {
+  /* for some reason this is floating in front of header */
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -196,10 +197,11 @@ hr {
 		margin: 0;
 		padding-left: 0 5%;
     padding-right: 0 5%;
-		background: black;
+		background: rgba(var(--gray-light), 90%);
 		box-shadow: 0 2px 8px rgba(var(--black), 25%);
     position: fixed;
     width: 100%; 
+    z-index: 999;
 	}
 	h2 {
 		margin: 0;
