@@ -6,10 +6,15 @@ import { SITE_TITLE } from '../consts';
 <!-- for hamburger on mobile -->
 <div class="navalignment">
     
-        <h2 class="more-stuff-to-hide"><a href="/">{SITE_TITLE}</a></h2>
+    <h2 class="more-stuff-to-hide"><a href="/">{SITE_TITLE}</a></h2>
+
 	<div id="main-menu" class="nav-links">
         <div class="internal-links">
-            <HeaderLink href="/">Home</HeaderLink>
+			<!-- nbsp keeps links off the hard left edge -->
+			&nbsp;
+			&nbsp;
+			&nbsp;
+			<HeaderLink href="/">Home</HeaderLink>
             <HeaderLink href="/products">Products</HeaderLink>
             <HeaderLink href="/order">Order</HeaderLink>
             <HeaderLink href="/support">Support</HeaderLink>
@@ -47,68 +52,3 @@ import { SITE_TITLE } from '../consts';
 			</a>
 		</div>
 </div>
-
-<!-- <style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: black;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	header a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	header a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
-        .more-stuff-to-hide {
-			display: none;
-		}
-	}
-</style> -->
-
-<!-- moved to global.css -->
-<!-- <style>
-  /* Mobile-first: hide by default on small screens */
-  .nav-links {
-    display: none;
-    width: 100%;
-    /* Add other mobile styles: vertical alignment, padding, etc. */
-  }
-
-  /* Desktop styles: show navigation on large screens */
-  @media screen and (min-width: 768px) {
-    .nav-links {
-    	display: flex;
-		align-items: center;
-		/* or block, inline-block, etc. for desktop layout */
-    	/* Add other desktop styles: horizontal alignment, etc. */
-    }
-}
-</style> -->

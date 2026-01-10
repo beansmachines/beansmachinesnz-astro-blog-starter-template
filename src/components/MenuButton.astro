@@ -1,10 +1,24 @@
 <!-- for hamburger on mobile -->
 <button id="hamburger" aria-expanded="false" aria-controls="main-menu" class="menu-toggle">
+  <!-- extra between lines for padding without adding opaque background -->
+  <span class="betweenline"></span>
+  <span class="betweenline"></span>
+  <span class="betweenline"></span>
+  <span class="betweenline"></span>
+  <span class="betweenline"></span>
+  <span class="betweenline"></span>
+
+  <!-- this is the actual button -->
   <span class="line"></span>
   <span class="betweenline"></span>
   <span class="line"></span>
   <span class="betweenline"></span>
   <span class="line"></span>
+
+  <!-- additional padding -->
+  <span class="betweenline"></span>
+  <span class="betweenline"></span>
+  <span class="betweenline"></span>
 </button>
 
 <script>
@@ -17,7 +31,12 @@ const menuBtn = document.querySelector('.menu-toggle');
 <style>
   /* Mobile-first: show button on small screens */
   .menu-toggle {
-    padding: 20px; /* Makes the entire area easily clickable */
+    z-index: 1000;
+    position: fixed;
+    float: right; 
+    /* display: flex; */
+    padding-right: 20px; /* Makes the entire area easily clickable */
+    margin-top: 20px;
     /* display: inline-block; */
     cursor: pointer;
     background-color: transparent;
@@ -25,6 +44,7 @@ const menuBtn = document.querySelector('.menu-toggle');
     margin: 0;
     position: relative; /* Needed for positioning the inner bars */
     height: 0;
+    padding-bottom: 0px;
 
     /* display: block;
     border: 0;
@@ -62,15 +82,15 @@ const menuBtn = document.querySelector('.menu-toggle');
   transition: all 0.4s ease; /* Smooth transitions for animation */
 }
 
-.menu-toggle.open .line:nth-child(1) {
+.menu-toggle.open .line:nth-child(7) {
   transform: translateY(8px) rotate(45deg);
 }
 
-.menu-toggle.open .line:nth-child(3) {
+.menu-toggle.open .line:nth-child(9) {
   opacity: 0;
 }
 
-.menu-toggle.open .line:nth-child(5) {
+.menu-toggle.open .line:nth-child(11) {
   transform: translateY(-8px) rotate(-45deg);
 }
 
